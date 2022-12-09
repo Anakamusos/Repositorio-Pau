@@ -9,17 +9,21 @@
      <!-- script javascript     -->
 <script>
     function myFunction() {
-      alert("Tu nombre es:");
+        var nom= document.getElementById("nom").value ;
+        var cognom= document.getElementById("cognom").value 
+        alert("Tu nombre es: " + nom + " " + cognom);
     }
     </script>
 </head>
 <body>
-    <body onclick="myFunction()"></body>
-    <h1 id="azul">Practica bloque 3</h1>
-    <p>Introduce el nombre <input type="text">
+    <body></body>
+    <h1>Practica bloque 3</h1>
+    <p>Introduce el nombre 
+        <input type="text" id="nom">
 
 
-    Introduce el apellido <input type="text"> 
+    Introduce el apellido 
+    <input type="text" id="cognom" onblur="myFunction()"> 
     <input type="submit">
     </p>
     

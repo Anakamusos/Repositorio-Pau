@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>index.html</title>
 
-    <script>
+ <!-- script javascript     -->
+<script>
+function funcion_nom() {
+  var nom = document.getElementById("name").value;
+  var cognom = "Jimenez" ;
+  alert (nom + " " + cognom);
+  // alert ('bienvenido ' + nom)
+}
 
-        function uno(){
-            alert("Se ha ejecutado un evento onload")
-        }
-        </script>
+function funcion_edad() {
+  var age = document.getElementById("age").value;
+  alert ('con ' + age + ' ya tendrás el carnet de conducir. ¿no?')
+}
 
+</script>
+
+<script>
+    function once(){
+        once = function(){};
+        alert("Ok, esto se me va a olvidar seguro");
+    }
+</script>
 </head>
-<body onload="uno()">
-<h1>Eventos html</h1>
 
+<body >
+<h1>Eventos HTML</h1>
+Introduce tu nombre:  <input type="text" id="name" onblur="funcion_nom()">
+Introduce tu edad: <input type="text" id="age" onchange="funcion_edad()">
 
+<p>When you leave the input field, a function is 
+triggered which transforms the input text to upper 
+case.</p>
 
-
-
-
+<input type="text" placeholder="Me ves y ya no" onfocus="once()">
 
 </body>
 </html>
